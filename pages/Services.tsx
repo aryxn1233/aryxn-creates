@@ -1,55 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, Smartphone, Code, Cpu, ShoppingBag, Search } from 'lucide-react';
+import { GitMerge, Brain, Zap, RefreshCw, Webhook, Database, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
-    icon: <Monitor className="w-8 h-8 text-aether-purple dark:text-aether-accent" />,
-    title: "Premium Web Design",
-    desc: "Bespoke, cinematic websites designed to position you as the authority in your niche.",
-    price: "Starts at $1k"
+    icon: <GitMerge className="w-8 h-8" style={{ color: '#7c3aed' }} />,
+    title: "n8n Workflow Automation",
+    desc: "Custom n8n workflows that connect your tools, automate repetitive tasks, and free your team to focus on high-value work.",
+    price: "Starts at $800"
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-aether-accent dark:text-aether-purple" />,
-    title: "UI/UX Design",
-    desc: "User-centric interfaces for mobile apps and SaaS platforms that users love.",
-    price: "Starts at $4k"
+    icon: <Brain className="w-8 h-8" style={{ color: '#06b6d4' }} />,
+    title: "AI Agent Pipelines",
+    desc: "Multi-step AI agent workflows using GPT-4, Claude, and Gemini — integrated into your existing business processes.",
+    price: "Starts at $1.5k"
   },
   {
-    icon: <Code className="w-8 h-8 text-yellow-600 dark:text-aether-gold" />,
-    title: "Custom Development",
-    desc: "React, Next.js, and Node.js solutions. Fast, scalable, and SEO-optimized code.",
+    icon: <Zap className="w-8 h-8" style={{ color: '#f59e0b' }} />,
+    title: "Business Process Automation",
+    desc: "Map, optimize, and automate your critical business workflows — from lead nurturing to invoice processing to HR pipelines.",
+    price: "Starts at $1.2k"
+  },
+  {
+    icon: <RefreshCw className="w-8 h-8" style={{ color: '#10b981' }} />,
+    title: "CRM & Tool Integration",
+    desc: "Connect HubSpot, Notion, Airtable, Slack, and 400+ apps into unified automated workflows without writing a line of code.",
+    price: "Starts at $600"
+  },
+  {
+    icon: <Webhook className="w-8 h-8" style={{ color: '#ec4899' }} />,
+    title: "Webhook & API Automation",
+    desc: "Real-time automation triggered by webhooks, API events, and database changes — connecting your entire software stack.",
     price: "Custom Quote"
   },
   {
-    icon: <Cpu className="w-8 h-8 text-blue-500 dark:text-blue-400" />,
-    title: "AI Integration",
-    desc: "Chatbots, automation, and personalized content engines powered by LLMs.",
-    price: "Starts at $2k"
-  },
-  {
-    icon: <ShoppingBag className="w-8 h-8 text-pink-500 dark:text-pink-400" />,
-    title: "E-Commerce",
-    desc: "High-conversion Shopify & Woocommerce stores tailored for maximum AOV.",
-    price: "Starts at $6k"
-  },
-  {
-    icon: <Search className="w-8 h-8 text-green-600 dark:text-green-400" />,
-    title: "SEO & Performance",
-    desc: "Technical SEO and speed optimization to rank higher and load faster.",
+    icon: <Database className="w-8 h-8" style={{ color: '#6366f1' }} />,
+    title: "Data Pipeline Automation",
+    desc: "Automated data extraction, transformation, and loading (ETL) pipelines — keeping your dashboards and reports up to date.",
     price: "Retainer Based"
   }
 ];
+
+const industries = ['Healthcare', 'Real Estate', 'E-commerce', 'Legal', 'Finance', 'SaaS', 'Agencies', 'HR & Recruitment'];
 
 export const Services: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white">Digital <span className="gradient-text">Dominance</span></h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
+            Automation <span className="gradient-text">Services</span>
+          </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We don't sell hours. We sell outcomes. Our suite of services is designed to handle every aspect of your digital growth.
+            We build n8n-powered automation systems and AI workflows that eliminate manual work, connect your tools, and scale your operations — without writing custom code.
           </p>
         </div>
 
@@ -80,19 +84,33 @@ export const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Industry Solutions Section */}
+        {/* Industries */}
         <div className="mt-32">
-            <h2 className="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">Solutions by Industry</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['Medical', 'Real Estate', 'Restaurants', 'Legal'].map((ind) => (
-                    <div key={ind} className="h-40 relative rounded-xl overflow-hidden group cursor-pointer shadow-md">
-                        <img src={`https://picsum.photos/seed/${ind}/400/300`} className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110 duration-700" alt={ind} />
-                        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                            <span className="text-xl font-bold text-white">{ind}</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
+          <h2 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Industries We Automate</h2>
+          <p className="text-gray-500 dark:text-gray-400 text-center mb-12 max-w-xl mx-auto">
+            We've built automation workflows for businesses across every industry — wherever there's repetitive work, we eliminate it.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {industries.map((ind) => (
+              <div key={ind} className="px-6 py-3 rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-medium hover:border-aether-purple dark:hover:border-aether-accent hover:text-aether-purple dark:hover:text-aether-accent transition-colors cursor-default">
+                {ind}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* n8n callout */}
+        <div className="mt-24 rounded-3xl p-12 text-center" style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,182,212,0.1))', border: '1px solid rgba(124,58,237,0.2)' }}>
+          <div className="text-5xl mb-4">⚡</div>
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">n8n Certified Experts</h3>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+            We specialize in n8n — the most powerful open-source workflow automation platform. From simple 2-step automations to complex multi-agent AI pipelines with hundreds of nodes, we've built it all.
+          </p>
+          <Link to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-white"
+            style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}>
+            Discuss Your Automation <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </div>

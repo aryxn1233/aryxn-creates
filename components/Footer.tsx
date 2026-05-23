@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
                <span className="text-yellow-600 dark:text-aether-gold font-script text-3xl -mb-1 transform -rotate-2">creates</span>
             </Link>
             <p className="text-gray-600 dark:text-gray-500 text-sm leading-relaxed">
-              Crafting digital masterpieces for forward-thinking brands. We build websites that don't just look good—they perform.
+              n8n automation experts building AI-powered workflows that eliminate manual work and scale your operations.
             </p>
           </div>
           
@@ -23,17 +23,17 @@ export const Footer: React.FC = () => {
               <li><Link to="/portfolio" className="hover:text-aether-purple dark:hover:text-aether-accent transition-colors">Work</Link></li>
               <li><Link to="/services" className="hover:text-aether-purple dark:hover:text-aether-accent transition-colors">Services</Link></li>
               <li><Link to="/process" className="hover:text-aether-purple dark:hover:text-aether-accent transition-colors">Process</Link></li>
-              <li><Link to="/about" className="hover:text-aether-purple dark:hover:text-aether-accent transition-colors">About Agency</Link></li>
+              <li><Link to="/about" className="hover:text-aether-purple dark:hover:text-aether-accent transition-colors">About Us</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-6">Services</h4>
              <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-500">
-              <li>Web Design</li>
-              <li>Development</li>
-              <li>UI/UX Design</li>
-              <li>E-commerce</li>
+              <li>n8n Workflows</li>
+              <li>AI Agent Pipelines</li>
+              <li>CRM Integrations</li>
+              <li>Data Automation</li>
             </ul>
           </div>
 
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">© 2024 Aryxn Creates. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2025 Aryxn Creates. n8n Automation Experts.</p>
           <div className="flex gap-6 text-sm text-gray-500">
             <Link to="/privacy" className="hover:text-gray-900 dark:hover:text-white">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-gray-900 dark:hover:text-white">Terms of Service</Link>

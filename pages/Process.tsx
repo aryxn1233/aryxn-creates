@@ -4,28 +4,28 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     num: "01",
-    title: "Discovery & Strategy",
-    desc: "We dive deep into your brand, audience, and goals. We don't start designing until we understand the 'why' behind the 'what'."
+    title: "Discovery & Audit",
+    desc: "We start by mapping your existing workflows, tools, and pain points. We document every manual process and identify the highest-impact automation opportunities."
   },
   {
     num: "02",
-    title: "Wireframing & UX",
-    desc: "Blueprinting the user journey. We map out the structure to ensure maximum conversion and intuitive navigation."
+    title: "Automation Blueprint",
+    desc: "We design the n8n workflow architecture — mapping triggers, actions, conditions, and data flows before touching a single node. You approve the blueprint before we build."
   },
   {
     num: "03",
-    title: "Visual Design",
-    desc: "Where the magic happens. We apply cinematic aesthetics, typography, and motion to bring the wireframes to life."
+    title: "Workflow Build",
+    desc: "We build your automation in n8n with proper error handling, retry logic, and monitoring. Complex AI pipelines are integrated with GPT-4, Claude, or Gemini where needed."
   },
   {
     num: "04",
-    title: "Development",
-    desc: "Coding with clean, semantic React/Next.js. Ensuring speed, accessibility, and responsiveness across all devices."
+    title: "Testing & QA",
+    desc: "Every workflow is stress-tested with real data. We simulate edge cases, API failures, and unexpected inputs to ensure your automation never silently breaks."
   },
   {
     num: "05",
-    title: "Launch & Scale",
-    desc: "Pre-flight checks, SEO deployment, and go-live. We provide training and ongoing support to help you grow."
+    title: "Deployment & Handoff",
+    desc: "We deploy to your environment, document every workflow, and train your team. You own the automation — we provide ongoing support to iterate and expand."
   }
 ];
 
@@ -34,8 +34,12 @@ export const Process: React.FC = () => {
     <div className="pt-32 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">The <span className="text-aether-purple">Process</span></h1>
-          <p className="text-gray-600 dark:text-gray-400">A structured path to digital excellence.</p>
+          <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            Our <span className="text-aether-purple dark:text-aether-accent">Process</span>
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            A battle-tested 5-step approach to building automations that actually work — from discovery to deployment.
+          </p>
         </div>
 
         <div className="relative">
@@ -44,11 +48,11 @@ export const Process: React.FC = () => {
 
           <div className="space-y-20">
             {steps.map((step, idx) => (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                key={idx} 
+                key={idx}
                 className={`relative flex flex-col md:flex-row gap-8 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >
                  {/* Center Dot */}
