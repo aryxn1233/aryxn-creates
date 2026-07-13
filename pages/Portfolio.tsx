@@ -59,9 +59,27 @@ const projects: Project[] = [
     tags: ['SaaS', 'Dashboard', 'Data Viz'],
     liveUrl: 'https://tradingboot.netlify.app/dashboard'
   },
+  {
+    id: '7',
+    title: 'By Sugamjit Kaur',
+    category: 'Fashion',
+    image: './sugam.png',
+    description: 'Elegant fashion brand portfolio and lookbook.',
+    tags: ['Fashion', 'Portfolio', 'Web Design'],
+    liveUrl: 'https://bysugamjitkaur.vercel.app'
+  },
+  {
+    id: '8',
+    title: 'Beauty From Ashes',
+    category: 'Tattoo',
+    image: './beautyashes.png',
+    description: 'Distinctive tattoo brand showcase and gallery.',
+    tags: ['Tattoo', 'Gallery', 'Artist'],
+    liveUrl: 'https://beautyfromashes.vercel.app'
+  },
 ];
 
-const categories = ['All', 'Enterprise', 'Medical', 'Real Estate', 'Fitness', 'Restaurant', 'Tech', 'Tattoo'];
+const categories = ['All', 'Enterprise', 'Medical', 'Real Estate', 'Fitness', 'Restaurant', 'Tech', 'Tattoo', 'Fashion'];
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -114,7 +132,7 @@ export const Portfolio: React.FC = () => {
                   : 'bg-gray-200 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
               }`}
               style={filter === cat && cat === 'Enterprise'
-                ? { background: 'linear-gradient(to right, #00f2ff, #bd00ff)' }
+                ? { background: 'linear-gradient(to right, #00ff66, #ffffff)' }
                 : {}
               }
             >
@@ -137,22 +155,22 @@ export const Portfolio: React.FC = () => {
                 className="relative rounded-3xl overflow-hidden border transition-all duration-500 group-hover:scale-[1.01]"
                 style={{
                   background: 'linear-gradient(135deg, rgba(10,10,15,0.97) 0%, rgba(19,13,31,0.97) 100%)',
-                  border: '1px solid rgba(0,242,255,0.2)',
-                  boxShadow: '0 0 60px rgba(0,242,255,0.06), 0 32px 80px rgba(0,0,0,0.4)',
+                  border: '1px solid rgba(0,255,102,0.2)',
+                  boxShadow: '0 0 60px rgba(0,255,102,0.06), 0 32px 80px rgba(0,0,0,0.4)',
                 }}
               >
                 {/* Animated grid */}
                 <div className="absolute inset-0 opacity-40"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(0,242,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,242,255,0.05) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(rgba(0,255,102,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,102,0.05) 1px, transparent 1px)`,
                     backgroundSize: '40px 40px',
                   }}
                 />
                 {/* Glow */}
                 <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-[120px] pointer-events-none"
-                  style={{ background: 'rgba(189,0,255,0.12)' }} />
+                  style={{ background: 'rgba(0,255,102,0.12)' }} />
                 <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-[100px] pointer-events-none"
-                  style={{ background: 'rgba(0,242,255,0.08)' }} />
+                  style={{ background: 'rgba(255,255,255,0.08)' }} />
 
                 <div className="relative z-10 p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                   {/* Left content */}
@@ -160,11 +178,11 @@ export const Portfolio: React.FC = () => {
                     {/* Badges */}
                     <div className="flex flex-wrap gap-3 mb-6">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-black"
-                        style={{ background: 'linear-gradient(to right, #00f2ff, #bd00ff)' }}>
+                        style={{ background: 'linear-gradient(to right, #00ff66, #ffffff)' }}>
                         ⭐ Featured Enterprise Project
                       </span>
                       <span className="px-3 py-1 rounded-full text-xs font-medium text-aether-accent border"
-                        style={{ borderColor: 'rgba(0,242,255,0.3)', background: 'rgba(0,242,255,0.05)' }}>
+                        style={{ borderColor: 'rgba(0,255,102,0.3)', background: 'rgba(0,255,102,0.05)' }}>
                         AI • Automation • SaaS
                       </span>
                     </div>
@@ -182,9 +200,9 @@ export const Portfolio: React.FC = () => {
                     {/* Mini metrics */}
                     <div className="grid grid-cols-3 gap-4 mb-8">
                       {[
-                        { value: '78%', label: 'Ops Reduced', color: '#00f2ff' },
-                        { value: '2.3M', label: 'Workflows/day', color: '#bd00ff' },
-                        { value: '99.97%', label: 'Uptime SLA', color: '#51cf66' },
+                        { value: '78%', label: 'Ops Reduced', color: '#00ff66' },
+                        { value: '2.3M', label: 'Workflows/day', color: '#ffffff' },
+                        { value: '99.97%', label: 'Uptime SLA', color: '#00cc55' },
                       ].map((s, i) => (
                         <div key={i} className="text-center p-3 rounded-xl"
                           style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
@@ -203,8 +221,8 @@ export const Portfolio: React.FC = () => {
                       ))}
                     </div>
 
-                    <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-black transition-all group-hover:shadow-[0_0_30px_rgba(0,242,255,0.4)]"
-                      style={{ background: 'linear-gradient(to right, #00f2ff, #bd00ff)' }}>
+                    <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-black transition-all group-hover:shadow-[0_0_30px_rgba(0,255,102,0.4)]"
+                      style={{ background: 'linear-gradient(to right, #00ff66, #ffffff)' }}>
                       View Full Case Study <ChevronRight className="w-4 h-4" />
                     </div>
                   </div>
@@ -212,12 +230,12 @@ export const Portfolio: React.FC = () => {
                   {/* Right: Dashboard preview image */}
                   <div className="relative">
                     <div className="absolute inset-0 rounded-2xl blur-2xl opacity-30"
-                      style={{ background: 'linear-gradient(135deg, #00f2ff, #bd00ff)' }} />
+                      style={{ background: 'linear-gradient(135deg, #00ff66, #ffffff)' }} />
                     <img
                       src="./antigravity.png"
                       alt="Antigravity Ops Dashboard"
                       className="relative z-10 w-full rounded-2xl border transition-transform duration-700 group-hover:scale-[1.02]"
-                      style={{ border: '1px solid rgba(0,242,255,0.2)', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
+                      style={{ border: '1px solid rgba(0,255,102,0.2)', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
                     />
                     {/* Live indicator overlay */}
                     <div className="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold"
@@ -229,9 +247,9 @@ export const Portfolio: React.FC = () => {
                     {/* Feature pills floating */}
                     <div className="absolute -bottom-4 -left-4 z-20 flex flex-col gap-2">
                       {[
-                        { icon: <Zap className="w-3 h-3" />, label: 'AI Processing', color: '#00f2ff' },
-                        { icon: <GitBranch className="w-3 h-3" />, label: 'Workflow Engine', color: '#bd00ff' },
-                        { icon: <BarChart2 className="w-3 h-3" />, label: 'Live Analytics', color: '#51cf66' },
+                        { icon: <Zap className="w-3 h-3" />, label: 'AI Processing', color: '#00ff66' },
+                        { icon: <GitBranch className="w-3 h-3" />, label: 'Workflow Engine', color: '#ffffff' },
+                        { icon: <BarChart2 className="w-3 h-3" />, label: 'Live Analytics', color: '#00cc55' },
                       ].map((pill, i) => (
                         <div key={i} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-white"
                           style={{ background: 'rgba(10,10,15,0.95)', border: `1px solid ${pill.color}40`, color: pill.color, boxShadow: `0 4px 16px rgba(0,0,0,0.4)` }}>

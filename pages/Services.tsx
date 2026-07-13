@@ -1,60 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GitMerge, Brain, Zap, RefreshCw, Webhook, Database, ChevronRight } from 'lucide-react';
+import { 
+  GitBranch, 
+  Brain, 
+  Zap, 
+  BarChart2, 
+  Users,
+  Megaphone,
+  Smartphone,
+  Search,
+  PenTool,
+  ChevronRight,
+  LayoutTemplate,
+  TerminalSquare
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  {
-    icon: <GitMerge className="w-8 h-8" style={{ color: '#7c3aed' }} />,
-    title: "n8n Workflow Automation",
-    desc: "Custom n8n workflows that connect your tools, automate repetitive tasks, and free your team to focus on high-value work.",
-    price: "Starts at $800"
-  },
-  {
-    icon: <Brain className="w-8 h-8" style={{ color: '#06b6d4' }} />,
-    title: "AI Agent Pipelines",
-    desc: "Multi-step AI agent workflows using GPT-4, Claude, and Gemini — integrated into your existing business processes.",
-    price: "Starts at $1.5k"
-  },
-  {
-    icon: <Zap className="w-8 h-8" style={{ color: '#f59e0b' }} />,
-    title: "Business Process Automation",
-    desc: "Map, optimize, and automate your critical business workflows — from lead nurturing to invoice processing to HR pipelines.",
-    price: "Starts at $1.2k"
-  },
-  {
-    icon: <RefreshCw className="w-8 h-8" style={{ color: '#10b981' }} />,
-    title: "CRM & Tool Integration",
-    desc: "Connect HubSpot, Notion, Airtable, Slack, and 400+ apps into unified automated workflows without writing a line of code.",
-    price: "Starts at $600"
-  },
-  {
-    icon: <Webhook className="w-8 h-8" style={{ color: '#ec4899' }} />,
-    title: "Webhook & API Automation",
-    desc: "Real-time automation triggered by webhooks, API events, and database changes — connecting your entire software stack.",
-    price: "Custom Quote"
-  },
-  {
-    icon: <Database className="w-8 h-8" style={{ color: '#6366f1' }} />,
-    title: "Data Pipeline Automation",
-    desc: "Automated data extraction, transformation, and loading (ETL) pipelines — keeping your dashboards and reports up to date.",
-    price: "Retainer Based"
-  }
+  { title: 'AI Marketing', desc: 'Data-driven campaigns powered by machine learning to maximize ROI and lower acquisition costs.', icon: <BarChart2 className="w-8 h-8" /> },
+  { title: 'Social Media Management', desc: 'Engaging content and community growth across all platforms to build loyal audiences.', icon: <Users className="w-8 h-8" /> },
+  { title: 'AI Video Ads', desc: 'High-converting video creative generated and optimized by AI for platforms like TikTok and Meta.', icon: <Megaphone className="w-8 h-8" /> },
+  { title: 'Web Development', desc: 'Premium, fast, and scalable websites built with modern stacks (Next.js, React).', icon: <TerminalSquare className="w-8 h-8" /> },
+  { title: 'Mobile Apps', desc: 'Native and cross-platform mobile experiences for iOS and Android built for retention.', icon: <Smartphone className="w-8 h-8" /> },
+  { title: 'Brand Identity & Strategy', desc: 'Complete visual systems, from logos to typography and voice, designed to stand out.', icon: <PenTool className="w-8 h-8" /> },
+  { title: 'SEO & Performance', desc: 'Technical and content-driven search engine optimization to dominate organic search.', icon: <Search className="w-8 h-8" /> },
+  { title: 'AI Automation', desc: 'Custom workflows to eliminate manual tasks and scale your business operations.', icon: <Zap className="w-8 h-8" /> },
+  { title: 'SaaS Development', desc: 'End-to-end development of scalable SaaS products and complex web applications.', icon: <GitBranch className="w-8 h-8" /> },
+  { title: 'AI Chatbots & Agents', desc: 'Intelligent conversational agents trained on your data to handle sales and support 24/7.', icon: <Brain className="w-8 h-8" /> },
+  { title: 'UI/UX Design', desc: 'Intuitive, stunning user interfaces designed to maximize conversion and user delight.', icon: <LayoutTemplate className="w-8 h-8" /> },
 ];
-
-const industries = ['Healthcare', 'Real Estate', 'E-commerce', 'Legal', 'Finance', 'SaaS', 'Agencies', 'HR & Recruitment'];
 
 export const Services: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
-            Automation <span className="gradient-text">Services</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We build n8n-powered automation systems and AI workflows that eliminate manual work, connect your tools, and scale your operations — without writing custom code.
-          </p>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
+          >
+            Our <span className="text-aether-accent">Expertise</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
+          >
+            We don't just build websites; we build ecosystems. From AI-driven marketing campaigns to custom software, we cover the entire digital landscape.
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -63,54 +58,36 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.05 }}
               key={idx}
-              className="glass-panel p-8 rounded-2xl bg-white dark:bg-transparent hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group border border-gray-200 dark:border-white/5 hover:border-aether-purple/30 dark:hover:border-aether-accent/30 shadow-lg dark:shadow-none"
+              className="glass-panel p-8 rounded-3xl bg-white dark:bg-aether-900/20 hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 group border border-gray-200 dark:border-white/5 hover:border-aether-accent/50 hover:-translate-y-2 relative overflow-hidden"
             >
-              <div className="mb-6 bg-gray-100 dark:bg-white/5 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-aether-accent/5 rounded-full blur-3xl group-hover:bg-aether-accent/20 transition-all"></div>
+              
+              <div className="mb-6 text-aether-accent bg-aether-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">{service.title}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 {service.desc}
               </p>
-              <div className="flex items-center justify-between border-t border-gray-200 dark:border-white/10 pt-4">
-                <span className="text-xs font-mono text-gray-500">{service.price}</span>
-                <Link to="/contact" className="text-sm font-bold text-gray-900 dark:text-white hover:text-aether-purple dark:hover:text-aether-accent transition-colors">
-                  Inquire &rarr;
-                </Link>
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Industries */}
-        <div className="mt-32">
-          <h2 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Industries We Automate</h2>
-          <p className="text-gray-500 dark:text-gray-400 text-center mb-12 max-w-xl mx-auto">
-            We've built automation workflows for businesses across every industry — wherever there's repetitive work, we eliminate it.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {industries.map((ind) => (
-              <div key={ind} className="px-6 py-3 rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-medium hover:border-aether-purple dark:hover:border-aether-accent hover:text-aether-purple dark:hover:text-aether-accent transition-colors cursor-default">
-                {ind}
-              </div>
-            ))}
+        {/* CTA Block */}
+        <div className="mt-24 rounded-3xl p-12 text-center relative overflow-hidden bg-gray-900 dark:bg-[#0a0a0a] border border-gray-800 dark:border-white/5">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-aether-accent/10 rounded-full blur-[100px]" />
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Need a Custom Solution?</h3>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-8 text-lg">
+              Every brand is unique. Let's hop on a call to discuss your specific challenges and how our ecosystem of services can drive your growth.
+            </p>
+            <Link to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black bg-aether-accent hover:bg-white transition-colors shadow-[0_0_30px_rgba(0,255,102,0.3)]">
+              Book a Discovery Call <ChevronRight className="w-5 h-5" />
+            </Link>
           </div>
-        </div>
-
-        {/* n8n callout */}
-        <div className="mt-24 rounded-3xl p-12 text-center" style={{ background: 'linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,182,212,0.1))', border: '1px solid rgba(124,58,237,0.2)' }}>
-          <div className="text-5xl mb-4">⚡</div>
-          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">n8n Certified Experts</h3>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            We specialize in n8n — the most powerful open-source workflow automation platform. From simple 2-step automations to complex multi-agent AI pipelines with hundreds of nodes, we've built it all.
-          </p>
-          <Link to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-white"
-            style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}>
-            Discuss Your Automation <ChevronRight className="w-4 h-4" />
-          </Link>
         </div>
       </div>
     </div>

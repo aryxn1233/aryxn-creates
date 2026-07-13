@@ -8,12 +8,11 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
-             <Link to="/" className="text-3xl tracking-tighter flex items-end gap-1">
-               <span className="text-aether-purple dark:text-aether-accent font-bold font-sans">aryxn</span>
-               <span className="text-yellow-600 dark:text-aether-gold font-script text-3xl -mb-1 transform -rotate-2">creates</span>
+             <Link to="/" className="flex items-center gap-2">
+               <img src="/logo.png" alt="ARYXNCREATES" className="h-16 object-contain" />
             </Link>
             <p className="text-gray-600 dark:text-gray-500 text-sm leading-relaxed">
-              n8n automation experts building AI-powered workflows that eliminate manual work and scale your operations.
+              You imagine your brand. We build everything else. ARYXNCREATES is a premium AI-powered creative and marketing agency.
             </p>
           </div>
           
@@ -30,10 +29,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-6">Services</h4>
              <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-500">
-              <li>n8n Workflows</li>
-              <li>AI Agent Pipelines</li>
-              <li>CRM Integrations</li>
-              <li>Data Automation</li>
+              <li>AI Content & Marketing</li>
+              <li>SaaS & Web Development</li>
+              <li>Brand Identity & Strategy</li>
+              <li>AI Agents & Automation</li>
             </ul>
           </div>
 
@@ -54,7 +53,7 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">© 2025 Aryxn Creates. n8n Automation Experts.</p>
+          <p className="text-gray-500 text-sm">© 2026 ARYXNCREATES. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-gray-500">
             <Link to="/privacy" className="hover:text-gray-900 dark:hover:text-white">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-gray-900 dark:hover:text-white">Terms of Service</Link>

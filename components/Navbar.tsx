@@ -40,9 +40,8 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass-panel border-b-0 dark:border-white/5 bg-white/80 dark:bg-aether-900/80 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="text-3xl tracking-tighter flex items-end gap-1 group">
-           <span className="text-aether-purple dark:text-aether-accent font-bold font-sans group-hover:text-black dark:group-hover:text-white transition-colors">aryxn</span>
-           <span className="text-yellow-500 dark:text-aether-gold font-script text-4xl -mb-1 transform -rotate-2 group-hover:rotate-0 transition-transform">creates</span>
+        <Link to="/" className="flex items-center gap-2 group">
+           <img src="/logo.png" alt="ARYXNCREATES" className="h-16 object-contain transition-transform duration-300 group-hover:scale-105" />
         </Link>
 
         {/* Desktop Nav */}

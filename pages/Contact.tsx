@@ -47,8 +47,8 @@ export const Contact: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen bg-gray-50 dark:bg-aether-900 relative overflow-hidden transition-colors duration-300">
       {/* Background blobs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-200/50 dark:bg-aether-purple/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-200/50 dark:bg-aether-accent/10 rounded-full blur-[100px]" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-aether-accent/10 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-white/5 dark:bg-white/5 rounded-full blur-[100px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -56,22 +56,22 @@ export const Contact: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">Let's Build the <br/><span className="gradient-text">Future</span>.</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">Ready to Build Something <span className="gradient-text">Extraordinary?</span></h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
-              Ready to start? Fill out the form and we'll get back to you within 24 hours with a free consultation and proposal.
+              Start your project today. Fill out the form and we'll get back to you within 24 hours with a free consultation and custom proposal.
             </p>
 
             <div className="space-y-6 mb-12">
               <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><Mail className="text-aether-purple dark:text-aether-accent" /></div>
+                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><Mail className="text-aether-accent" /></div>
                 <span className="break-all">aryanthakur.1125.bussiness@gmail.com</span>
               </div>
               <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><Phone className="text-aether-purple" /></div>
+                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><Phone className="text-aether-accent" /></div>
                 <span>+91 9015334416</span>
               </div>
               <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><MapPin className="text-yellow-600 dark:text-aether-gold" /></div>
+                <div className="p-3 bg-gray-200 dark:bg-white/5 rounded-full"><MapPin className="text-aether-accent" /></div>
                 <span>Chandigarh, India</span>
               </div>
             </div>
@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Message Received!</h3>
                 <p className="text-gray-600 dark:text-gray-400">We've sent a confirmation to your email. We'll be in touch shortly.</p>
-                <button onClick={() => setSubmitted(false)} className="text-aether-purple dark:text-aether-accent underline">Send another</button>
+                <button onClick={() => setSubmitted(false)} className="text-aether-accent underline">Send another</button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
                     required 
                     type="text" 
                     name="name"
-                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-purple dark:focus:border-aether-accent focus:outline-none transition-colors"
+                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-accent dark:focus:border-aether-accent focus:outline-none transition-colors"
                     placeholder="John Doe"
                     value={formState.name}
                     onChange={e => setFormState({...formState, name: e.target.value})}
@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
                     required 
                     type="email" 
                     name="email"
-                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-purple dark:focus:border-aether-accent focus:outline-none transition-colors"
+                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-accent dark:focus:border-aether-accent focus:outline-none transition-colors"
                     placeholder="john@company.com"
                     value={formState.email}
                     onChange={e => setFormState({...formState, email: e.target.value})}
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Project Budget</label>
                   <select 
                     name="budget"
-                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-purple dark:focus:border-aether-accent focus:outline-none transition-colors appearance-none"
+                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-accent dark:focus:border-aether-accent focus:outline-none transition-colors appearance-none"
                     value={formState.budget}
                     onChange={e => setFormState({...formState, budget: e.target.value})}
                   >
@@ -143,7 +143,7 @@ export const Contact: React.FC = () => {
                     required
                     name="message"
                     rows={4}
-                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-purple dark:focus:border-aether-accent focus:outline-none transition-colors"
+                    className="w-full bg-white dark:bg-black/40 border border-gray-300 dark:border-white/10 rounded-lg p-4 text-gray-900 dark:text-white focus:border-aether-accent dark:focus:border-aether-accent focus:outline-none transition-colors"
                     placeholder="Tell us about your goals..."
                     value={formState.message}
                     onChange={e => setFormState({...formState, message: e.target.value})}
@@ -152,9 +152,9 @@ export const Contact: React.FC = () => {
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-gradient-to-r from-aether-purple to-blue-500 dark:from-aether-accent dark:to-aether-purple text-white font-bold rounded-lg hover:opacity-90 transition-opacity flex justify-center items-center shadow-lg"
+                  className="w-full py-4 bg-aether-accent text-black font-bold rounded-lg hover:bg-white transition-colors flex justify-center items-center shadow-[0_0_20px_rgba(0,255,102,0.3)]"
                 >
-                  {isSubmitting ? <Loader2 className="animate-spin" /> : "Send Inquiry"}
+                  {isSubmitting ? <Loader2 className="animate-spin" /> : "Start Your Project"}
                 </button>
               </form>
             )}
