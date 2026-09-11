@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARYXN CREATES — Creative Growth Agency</title>
+    <meta name="description" content="ARYXN CREATES is a creative growth agency combining strategy, design, AI and technology to build brands that look exceptional — and grow." />
+    <meta property="og:title" content="ARYXN CREATES — Creative Growth Agency" />
+    <meta property="og:description" content="Combining strategy, design, AI and technology to build brands that look exceptional — and grow." />
+    <meta property="og:image" content="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"Space Grotesk"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                bg: '#161719',
+                card: '#1F2023',
+                cardHover: '#282A2E',
+                border: 'rgba(255, 255, 255, 0.08)',
+                borderHover: 'rgba(168, 240, 0, 0.3)',
+                lime: '#A8F000',
+                limeDark: '#8CD400',
+                light: '#F5F5F5',
+                muted: '#9A9B9E',
+                subtle: '#2A2C30'
+              },
+              aether: {
+                900: '#161719',
+                800: '#1F2023',
+                700: '#282A2E',
+                accent: '#A8F000',
+                purple: '#A8F000',
+                gold: '#FFFFFF',
+              }
+            },
+            letterSpacing: {
+              tightest: '-0.04em',
+              tighter: '-0.02em',
+              widest: '0.15em',
+              mega: '0.25em',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        background-color: #161719;
+        color: #F5F5F5;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+        selection-background-color: #A8F000;
+        selection-color: #161719;
+      }
+      ::selection {
+        background-color: #A8F000;
+        color: #161719;
+      }
+      .glass-panel {
+        background: rgba(31, 32, 35, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .editorial-border {
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      .editorial-card {
+        background-color: #1F2023;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .editorial-card:hover {
+        border-color: rgba(168, 240, 0, 0.4);
+        transform: translateY(-2px);
+      }
+      .gradient-text {
+        color: #F5F5F5;
+      }
+      .lime-glow {
+        box-shadow: 0 0 25px rgba(168, 240, 0, 0.25);
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg text-brand-light antialiased selection:bg-brand-lime selection:text-brand-bg">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
